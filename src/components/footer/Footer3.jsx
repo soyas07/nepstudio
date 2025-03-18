@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ThumbFooter from "../../../public/assets/imgs/thumb/footer.jpg";
+import ThumbFooter from "../../../public/assets/imgs/thumb/footer.jpeg";
 import FooterLogoWhite from "../../../public/assets/imgs/logo/nepstudio-white-logo.png";
 import Image from "next/image";
 
