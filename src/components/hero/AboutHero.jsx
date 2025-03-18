@@ -18,7 +18,7 @@ const AboutHero = () => {
             <div className="col-xxl-12">
               <div className="hero__about-content">
                 <h1 className="hero-title animation__word_come" ref={wordAnim}>
-                  We're a custom web studio, crafting SEO-optimized
+                  We&apos;re a custom web studio, crafting SEO-optimized
                    sites that drive growth and elevate brands.
                 </h1>
                 <div className="hero__about-info">
