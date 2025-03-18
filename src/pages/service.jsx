@@ -1,7 +1,6 @@
 import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
 import ServiceElementV2 from "@/components/service/ServiceElementV2";
-import ServiceBrand from "@/components/brand/ServiceBrand";
 import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
 
 const ServiceV2Dark = () => {
