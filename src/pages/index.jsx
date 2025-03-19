@@ -41,8 +41,9 @@ const DigitalAgency = ({ blog }) => {
 
 // Server-Side Rendering (SSR) Function
 export async function getServerSideProps(context) {
-  const { req, query } = context;
-  const baseURL = `http://${req.headers.host}`; // Dynamically get the base URL
+  const { req } = context;
+  const baseURL = `https://${req.headers.host}`; // Dynamically get the base URL
+  console.log(baseURL)
   const res = await fetch(`${baseURL}/api/blog?id=1`);
   const blog = await res.json();
 
