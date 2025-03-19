@@ -14,7 +14,7 @@ const BlogDetailsDark = () => {
       </Head>
       <main>
         <RootLayout header="header3" footer="footer3" defaultMode="dark">
-          <BlogDetails1 />
+          <BlogDetails1 id={1} />
           <BlogRelated />
           <DigitalAgencyCTA />
         </RootLayout>

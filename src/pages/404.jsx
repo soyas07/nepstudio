@@ -1,6 +1,6 @@
-import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
 import Error1 from "@/components/error/Error1";
+import Head from "next/head";
 
 const ErrorDark = () => {
   return (

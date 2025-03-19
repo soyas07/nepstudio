@@ -1,7 +1,7 @@
-import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
-import DesignStudioProtfolio from "@/components/portfolio/DesignStudioProtfolio";
 import PortfolioV2CTA from "@/components/cta/PortfolioV2CTA";
+import DesignStudioProtfolio from "@/components/portfolio/DesignStudioProtfolio";
+import Head from "next/head";
 
 const PortfolioV3Dark = () => {
   return (

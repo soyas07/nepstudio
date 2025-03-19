@@ -1,14 +1,14 @@
-import Head from "next/head";
-import RootLayout from "@/components/common/layout/RootLayout";
-import DigitalAgencyHero from "@/components/hero/DigitalAgencyHero";
-import DigitalAgencyRoll from "@/components/roll/DigitalAgencyRoll";
 import DigitalAgencyAbout from "@/components/about/DigitalAgencyAbout";
+import DigitalAgencyBlog from "@/components/blog/DigitalAgencyBlog";
+import RootLayout from "@/components/common/layout/RootLayout";
+import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
+import Faq1 from "@/components/faq/Faq1";
+import DigitalAgencyHero from "@/components/hero/DigitalAgencyHero";
+import StartupAgencyPortfolio from "@/components/portfolio/StartupAgencyPortfolio";
+import DigitalAgencyRoll from "@/components/roll/DigitalAgencyRoll";
 import DigitalAgencyService from "@/components/service/DigitalAgencyService";
 import DigitalAgencyWorkflow from "@/components/workflow/DigitalAgencyWorkflow";
-import DigitalAgencyBlog from "@/components/blog/DigitalAgencyBlog";
-import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
-import StartupAgencyPortfolio from "@/components/portfolio/StartupAgencyPortfolio";
-import Faq1 from "@/components/faq/Faq1";
+import Head from "next/head";
 
 const DigitalAgency = () => {
   return (

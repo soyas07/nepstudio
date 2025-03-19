@@ -1,27 +1,22 @@
-import Image from "next/image";
-import Link from "next/link";
-
-import Author from "../../../public/assets/imgs/blog/detail/author.png";
-import Detail1 from "../../../public/assets/imgs/blog/detail/1.jpg";
-import Detail2 from "../../../public/assets/imgs/blog/detail/2.jpg";
-import Detail3 from "../../../public/assets/imgs/blog/detail/3.jpg";
-import { useEffect, useRef, useState } from "react";
 import animationWordCome from "@/lib/utils/animationWordCome";
 import { fetchBlog } from "@/lib/utils/fetch";
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
-const BlogDetails1 = () => {
+const BlogDetails1 = ({ id }) => {
   const [blogData, setBlogData] = useState(null);
   const wordAnim = useRef();
   const wordAnim2 = useRef();
   useEffect(() => {
     const fetchBlogData = async () => {
-      const data = await fetchBlog("/api/blog?id=1");
+      const data = await fetchBlog(`/api/blog?id=${id}`);
       setBlogData(data);
     }
     fetchBlogData();
     animationWordCome(wordAnim.current);
     animationWordCome(wordAnim2.current);
-  }, []);
+  }, [id]);
 
 
   return (
@@ -36,7 +31,7 @@ const BlogDetails1 = () => {
                   className="blog__detail-date animation__word_come"
                   ref={wordAnim}
                 >
-                  Websites, Design, Digital <span>25 Jan 2019</span>
+                  Websites, Design, Digital <span>{blogData.date}</span>
                 </h2>
                 <h3
                   className="blog__detail-title animation__word_come"

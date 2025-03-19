@@ -1,15 +1,13 @@
-import { faMagnifyingGlass, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import logoWhite2 from "../../../public/assets/imgs/logo/nepstudio-white-logo.png";
 import Shape11 from "../../../public/assets/imgs/shape/11.png";
 import Shape12 from "../../../public/assets/imgs/shape/12.png";
-import Image from "next/image";
 
 const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
-  const [accordion, setAccordion] = useState(0);
-  const [subAccordion, setSubAccordion] = useState(0);
   const headerTitle = useRef();
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -37,12 +35,6 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
       }, 10);
     }
   }, []);
-  const openData = (data) => {
-    setAccordion(data);
-  };
-  const openSubData = (data) => {
-    setSubAccordion(data);
-  };
   const closeCanvas = () => {
     ofCanvasArea.current.style.opacity = "0";
     ofCanvasArea.current.style.visibility = "hidden";

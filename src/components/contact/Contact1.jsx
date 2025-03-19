@@ -7,7 +7,6 @@ const Contact1 = () => {
   const wordAnim = useRef();
   const nameInputRef = useRef();
 
-  // States to hold form data and submission status
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,6 +16,7 @@ const Contact1 = () => {
   });
 
   const [status, setStatus] = useState("");
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     if (nameInputRef.current) {
@@ -27,15 +27,36 @@ const Contact1 = () => {
     animationWordCome(wordAnim.current);
   }, []);
 
-
   // Handle form input changes
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+
+    // Remove error for the field when user starts typing
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
+  };
+
+  // Validate required fields
+  const validateForm = () => {
+    let newErrors = {};
+    if (!formData.name) newErrors.name = "Name is required.";
+    if (!formData.email) newErrors.email = "Email is required.";
+    if (!formData.subject) newErrors.subject = "Subject is required.";
+    if (!formData.message) newErrors.message = "Message is required.";
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Returns true if no errors
   };
 
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    if (!validateForm()) {
+      setStatus("Please fill in all required fields.");
+      return;
+    }
+
     setStatus("Sending...");
 
     try {
@@ -58,6 +79,7 @@ const Contact1 = () => {
           subject: "",
           message: "",
         });
+        setErrors({});
       } else {
         setStatus(result.error || "Error sending message.");
       }
@@ -75,7 +97,7 @@ const Contact1 = () => {
             <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
               <div className="sec-title-wrapper">
                 <h2 className="sec-title-2 animation__char_come" ref={charAnim}>
-                  Let’s get in touch
+                  Let&apos;s get in touch
                 </h2>
               </div>
             </div>
@@ -83,7 +105,7 @@ const Contact1 = () => {
               <div className="contact__text">
                 <p>
                   {
-                    "Great! We're excited to hear from you and let's start something special togerter. Call us for any inquery."
+                    "Great! We're excited to hear from you and let's start something special together. Call us for any inquiry."
                   }
                 </p>
               </div>
@@ -101,11 +123,11 @@ const Contact1 = () => {
                   say hello
                 </h3>
                 <ul>
-                  <li>
+                  {/* <li>
                     <a href="tel:+(2)578365379">+(2) 578 - 365 - 379</a>
-                  </li>
+                  </li> */}
                   <li>
-                    <a href="mailto:hello@nepstudio.com.au">hello@nepstudio.com.au</a>
+                    <a href="mailto:info@nepstudio.com.au">info@nepstudio.com.au</a>
                   </li>
                   <li>
                     <span>
@@ -127,8 +149,9 @@ const Contact1 = () => {
                         ref={nameInputRef} 
                         value={formData.name}
                         onChange={handleChange}
-                        required
+                        style={{ border: errors.name ? "2px solid red" : "" }}
                       />
+                      {errors.name && <p className="error-text">{errors.name}</p>}
                     </div>
                     <div className="col-xxl-6 col-xl-6 col-12">
                       <input 
@@ -137,8 +160,9 @@ const Contact1 = () => {
                         placeholder="Email *" 
                         value={formData.email}
                         onChange={handleChange}
-                        required  
+                        style={{ border: errors.email ? "2px solid red" : "" }}
                       />
+                      {errors.email && <p className="error-text">{errors.email}</p>}
                     </div>
                   </div>
                   <div className="row g-3">
@@ -152,25 +176,27 @@ const Contact1 = () => {
                         placeholder="Subject *"
                         value={formData.subject}
                         onChange={handleChange}
-                        required
+                        style={{ border: errors.subject ? "2px solid red" : "" }}
                       />
+                      {errors.subject && <p className="error-text">{errors.subject}</p>}
                     </div>
                   </div>
                   <div className="row g-3">
                     <div className="col-12">
                       <textarea
                         name="message"
-                        placeholder="Messages *"
+                        placeholder="Message *"
                         value={formData.message}
                         onChange={handleChange}
-                        required
+                        style={{ border: errors.message ? "2px solid red" : "" }}
                       ></textarea>
+                      {errors.message && <p className="error-text">{errors.message}</p>}
                     </div>
                   </div>
                   <div className="row g-3">
                     <div className="col-12">
                       <div className="btn_wrapper">
-                        <button className="wc-btn-primary btn-hover btn-item" type="submit" disabled={!formData.name || !formData.email || !formData.subject || !formData.message || status === "Sending..."}>
+                        <button className="wc-btn-primary btn-hover btn-item" type="submit" disabled={status === "Sending..."}>
                           <span></span> Send <br />
                           Messages <i className="fa-solid fa-arrow-right"></i>
                         </button>
@@ -178,7 +204,7 @@ const Contact1 = () => {
                     </div>
                   </div>
                 </form>
-                {status && <p className="status-message">{status}</p>}
+                {status && <p style={{marginTop:"2rem"}} className="status-message">{status}</p>}
               </div>
             </div>
           </div>

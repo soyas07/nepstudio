@@ -291,7 +291,7 @@ const DigitalAgencyService = () => {
                   </Link>
 
                   <Link
-                    href="/service-details"
+                    href="/service"
                     className={activeList == 3 ? "active" : ""}
                     data-service="3"
                   >
@@ -320,7 +320,7 @@ const DigitalAgencyService = () => {
                   </Link>
 
                   <Link
-                    href="/service-details"
+                    href="/service"
                     className={activeList == 4 ? "active" : ""}
                     data-service="4"
                   >

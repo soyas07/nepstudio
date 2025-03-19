@@ -1,16 +1,22 @@
-import { useEffect } from "react";
-import { gsap } from "gsap";
+import { fetchBlog } from "@/lib/utils/fetch";
 import { ScrollTrigger } from "@/plugins";
-import Link from "next/link";
-import Blog11 from "../../../public/assets/imgs/blog/1/1.jpg";
-import Blog12 from "../../../public/assets/imgs/blog/1/2.jpg";
-import Blog13 from "../../../public/assets/imgs/blog/1/3.jpg";
+import { gsap } from "gsap";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const DigitalAgencyBlog = () => {
+  const [blogData, setBlogData] = useState(null);
+
   useEffect(() => {
+    const fetchBlogData = async () => {
+      const data = await fetchBlog("/api/blog");
+      setBlogData(data);  
+    }
+    fetchBlogData();
+
     if (typeof window !== "undefined") {
       let device_width = window.innerWidth;
       let tHero = gsap.context(() => {
@@ -64,14 +70,62 @@ const DigitalAgencyBlog = () => {
                 <h3 className="sec-title">News insignt</h3>
               </div>
             </div>
-            <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+            {blogData && blogData.map((blog, i) => (
+              <div key={i} className="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
+                <article className="blog__item">
+                  <div className="blog__img-wrapper">
+                    <Link href={blog.url}>
+                      <div className="img-box">
+                        <Image
+                          priority
+                          width={500} // Set a fixed width
+                          height={300} // Set a fixed height
+                          style={{ objectFit: "cover" }}
+                          className="image-box__item"
+                          src={blog.images.heroImage.url}
+                          alt={blog.images.heroImage.alt}
+                        />
+                        <Image
+                          priority
+                          width={500} // Set a fixed width
+                          height={300} // Set a fixed height
+                          style={{ objectFit: "cover" }}
+                          className="image-box__item"
+                          src={blog.images.heroImage.url}
+                          alt={blog.images.heroImage.alt}
+                        />
+                      </div>
+                    </Link>
+                  </div>
+                  <h4 className="blog__meta">
+                    <Link href={blog.url}>{blog.category}</Link> . {blog.date}
+                  </h4>
+                  <h5>
+                    <Link href={blog.url} className="blog__title">
+                      {blog.title}
+                    </Link>
+                  </h5>
+                  <Link href={blog.url} className="blog__btn">
+                    Read More{" "}
+                    <span>
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </span>
+                  </Link>
+                </article>
+              </div>
+            ))}
+
+
+
+            {/* <div className="col-xxl-4 col-xl-4 col-lg-4 col-md-4">
               <article className="blog__item">
                 <div className="blog__img-wrapper">
-                  <Link href="/blog-details">
+                  <Link href="/blog">
                     <div className="img-box">
                       <Image
                         priority
-                        style={{ width: "auto", height: "auto" }}
+                        fill
+                        style={{ objectFit: "cover" }}
                         className="image-box__item"
                         src={Blog11}
                         alt=""
@@ -179,7 +233,7 @@ const DigitalAgencyBlog = () => {
                   </span>
                 </Link>
               </article>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

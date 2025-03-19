@@ -1,6 +1,8 @@
 [
     {
         "id": 1,
+        "url": "/blog/custom-coded-vs-template-websites",
+        "category": "Website Design",
         "title": "Why Custom-Coded Websites Outperform Template Websites like WordPress and Wix",
         "author": "NepStudio",
         "date": "20 Nov 2024",
@@ -10,24 +12,24 @@
         "images": {
             "author": {
                 "title": "author",
-                "url": "/../public/assets/imgs/blog/detail/ns.png",
+                "url": "/assets/imgs/blog/detail/ns.png",
                 "alt": "NepStudio"
             },
             "heroImage": {
                 "title": "hero-image",
-                "url": "/../public/assets/imgs/blog/blog_1-1.jpg",
+                "url": "/assets/imgs/blog/blog_1-1.jpg",
                 "alt": "Custom-Coded Websites Outperform Template Websites like WordPress and Wix"
             },
             "bodyImage1": {
                 "id": 3,
                 "title": "body-image-1",
-                "url": "/../public/assets/imgs/blog/blog_1-2.jpg",
+                "url": "/assets/imgs/blog/blog_1-2.jpg",
                 "alt": "Custom-Coded Websites vs Template Websites"
             },
             "bodyImage2": {
                 "id": 4,
                 "title": "body-image-2",
-                "url": "/../public/assets/imgs/blog/blog_1-3.png",
+                "url": "/assets/imgs/blog/blog_1-3.png",
                 "alt": "Cutom Coded Websites Advantages"
             }
         },

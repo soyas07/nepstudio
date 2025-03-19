@@ -1,7 +1,7 @@
-import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
-import Faq1 from "@/components/faq/Faq1";
 import FaqCTA from "@/components/cta/FaqCTA";
+import Faq1 from "@/components/faq/Faq1";
+import Head from "next/head";
 
 const FaqDark = () => {
   return (

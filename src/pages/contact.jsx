@@ -1,6 +1,6 @@
-import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
 import Contact1 from "@/components/contact/Contact1";
+import Head from "next/head";
 
 const ContactDark = () => {
   return (

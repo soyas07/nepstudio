@@ -358,6 +358,39 @@
   letter-spacing: 1px;
 }
 
+
+.hero__placeholder {
+  display: none;
+}
+@media only screen and (min-width: 1400px) {
+  .hero__placeholder {
+    display: inline-block;
+    visibility: hidden;
+  }
+}
+
+.hero__title::after {
+  content: "";
+  display: none;
+}
+
+#btn-cta {
+  background-color: #000;
+  border: 1px solid white;
+  color: #fff;
+}
+
+#btn-cta:hover {
+  color: black;
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.hero__area::after {
+  background-color: unset !important;
+}
+
+
 @media only screen and (min-width: 1400px) and (max-width: 1919px) {
   .offcanvas__menu {
     padding-top: 142px;

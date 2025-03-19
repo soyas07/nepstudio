@@ -1,18 +1,15 @@
+import Image from "next/image";
 import { Autoplay, EffectFade, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Portfilio21 from "../../../public/assets/imgs/portfolio/2/portfolio-1.png";
 import Portfilio22 from "../../../public/assets/imgs/portfolio/2/portfolio-2.jpg";
-import Portfilio23 from "../../../public/assets/imgs/portfolio/2/3.jpg";
-import Portfilio24 from "../../../public/assets/imgs/portfolio/2/4.jpg";
-import Portfilio25 from "../../../public/assets/imgs/portfolio/2/5.jpg";
-import Image from "next/image";
 
 // Import Swiper styles
+import Link from "next/link";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/effect-fade";
 import "swiper/css/pagination";
-import Link from "next/link";
 
 const DesignStudioProtfolio = () => {
   return (
@@ -63,7 +60,7 @@ const DesignStudioProtfolio = () => {
               <SwiperSlide>
                 <div className="portfolio__slide-2">
                   <div className="slide-img">
-                    <Link href="/portfolio-details">
+                    <Link href="/portfolio">
                       <Image
                         priority
                         style={{ width: "100%", height: "auto" }}
@@ -75,7 +72,7 @@ const DesignStudioProtfolio = () => {
                   <div className="slide-content">
                     <h2 className="sec-title">
                       {" "}
-                      <Link href="/portfolio-details">
+                      <Link href="/portfolio">
                         Profixer <span>Website</span>
                       </Link>
                     </h2>
@@ -97,7 +94,7 @@ const DesignStudioProtfolio = () => {
               <SwiperSlide>
                 <div className="portfolio__slide-2">
                   <div className="slide-img">
-                    <Link href="/portfolio-details">
+                    <Link href="/portfolio">
                       <Image
                         priority
                         style={{ width: "100%", height: "auto" }}
@@ -108,7 +105,7 @@ const DesignStudioProtfolio = () => {
                   </div>
                   <div className="slide-content">
                     <h2 className="sec-title">
-                      <Link href="/portfolio-details">
+                      <Link href="/portfolio">
                         MoversX <span>Website</span>
                       </Link>
                     </h2>
