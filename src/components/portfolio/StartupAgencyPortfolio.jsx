@@ -3,9 +3,9 @@ import Portfolio41 from "../../../public/assets/imgs/portfolio/1/portfolio-1.jpg
 import Portfolio42 from "../../../public/assets/imgs/portfolio/1/portfolio-2.jpg";
 
 // Import Swiper styles
-import "swiper/css";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import "swiper/css";
 
 const StartupAgencyPortfolio = () => {
   return (
@@ -69,7 +69,7 @@ const StartupAgencyPortfolio = () => {
                           </div>
                         </div>
                         <Image
-                          priority
+                          loading="lazy"
                           style={{ width: "100%", height: "auto" }}
                           src={Portfolio41}
                           alt="Portfolio Image"
@@ -96,7 +96,7 @@ const StartupAgencyPortfolio = () => {
                           </div>
                         </div>
                         <Image
-                          priority
+                          loading="lazy"
                           style={{ width: "100%", height: "auto" }}
                           src={Portfolio42}
                           alt="Portfolio Image"

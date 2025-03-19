@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+import { ScrollSmoother, ScrollTrigger } from "@/plugins";
 import { gsap } from "gsap";
-import { ScrollTrigger, ScrollSmoother } from "@/plugins";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect } from "react";
 import About11 from "../../../public/assets/imgs/about/1/about-1.jpg";
 import About12 from "../../../public/assets/imgs/about/1/about-2.jpg";
 
@@ -41,7 +41,7 @@ const DigitalAgencyAbout = () => {
                 <div className="about__img">
                   <div className="img-anim about__img_left">
                     <Image
-                      priority
+                      loading="lazy"
                       style={{ width: "auto", height: "auto" }}
                       src={About11}
                       alt="About Image"
@@ -51,9 +51,10 @@ const DigitalAgencyAbout = () => {
 
                   <div className="about__img-right">
                     <Image
-                      priority
+                      loading="lazy"
                       width={220}
-                      style={{ height: "auto" }}
+                      height={220}
+                      style={{ objectFit: "cover" }}
                       src={About12}
                       alt="About Image Right"
                       data-speed="0.5"
@@ -67,13 +68,6 @@ const DigitalAgencyAbout = () => {
 
                 <div className="about__content text-anim">
                   <p>
-                    {/* From traditional PR and thought leadership campaigns to
-                    storytelling and creative social media management we’ve got
-                    you covered. Something is not your average order-taking
-                    vendor. We are proud to be the go-to partner for some of the
-                    world’s biggest agencies and brands because they trust our
-                    expertise */}
-
                     From custom-coded, high-performance websites to SEO-driven 
                     strategies and responsive designs, we ensure your online presence 
                     is both impactful and future-proof. Unlike cookie-cutter templates, 

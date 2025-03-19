@@ -7,9 +7,13 @@ const PortfolioV3Dark = () => {
   return (
     <>
       <Head>
-        <title>Portfolio V3 Dark</title>
-        <meta name="description" content="Portfolio V3 Dark Description" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Explore NEPSTUDIO's portfolio of custom websites and digital projects that demonstrate our expertise and creativity." />
+        <meta name="keywords" content="portfolio, NEPSTUDIO portfolio, custom websites, web development projects" />
+        <meta property="og:title" content="NEPSTUDIO Portfolio" />
+        <meta property="og:description" content="Discover our portfolio showcasing custom websites and digital projects." />
+        <meta property="og:image" content="/assets/imgs/og/home-og.jpg" />
+        <meta property="og:url" content="https://www.nepstudio.com.au/portfolio" />
+        <title>NEPSTUDIO Portfolio</title>
       </Head>
       <main>
         <RootLayout header="header3" footer="footer3" defaultMode="dark">

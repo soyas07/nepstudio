@@ -7,9 +7,13 @@ const ServiceV2Dark = () => {
   return (
     <>
       <Head>
-        <title>Service V2 Dark</title>
-        <meta name="description" content="Service V2 Dark Description" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Discover the custom web development and SEO services offered by NEPSTUDIO to help grow your business." />
+        <meta name="keywords" content="web development services, SEO services, digital marketing, custom websites" />
+        <meta property="og:title" content="Our Services - NEPSTUDIO" />
+        <meta property="og:description" content="Learn more about NEPSTUDIO's custom web development and SEO services to boost your online presence." />
+        <meta property="og:image" content="/assets/imgs/og/home-og.jpg" />
+        <meta property="og:url" content="https://www.nepstudio.com.au/services" />
+        <title>Our Services - NEPSTUDIO</title>
       </Head>
       <main>
         <RootLayout header="header3" footer="footer3" defaultMode="dark">
