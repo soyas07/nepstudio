@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Head, Html, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -7,7 +8,7 @@ export default function Document() {
         <link
           href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
-        ></link>
+        />
         <link
           rel="icon"
           type="image/x-icon"
@@ -15,6 +16,7 @@ export default function Document() {
         />
       </Head>
       <body>
+        <GoogleAnalytics gaId="G-S8R9Z6B5ZP" />
         <Main />
         <NextScript />
       </body>

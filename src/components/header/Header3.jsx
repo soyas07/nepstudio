@@ -1,10 +1,10 @@
-import { useEffect, useRef, useState } from "react";
-import Canvas from "../canvas/Canvas";
+import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
+import MenuWhite from "../../../public/assets/imgs/icon/menu-white.png";
 import LogoWhite from "../../../public/assets/imgs/logo/nepstudio-white-logo-vertical.png";
 import LogoWhite2 from "../../../public/assets/imgs/logo/nepstudio-white-logo.png";
-import MenuWhite from "../../../public/assets/imgs/icon/menu-white.png";
-import Image from "next/image";
+import Canvas from "../canvas/Canvas";
 
 export default function Header3() {
   const [topScroll, setTopScroll] = useState(0);
@@ -51,19 +51,17 @@ export default function Header3() {
             <Link href="/">
               <Image
                 priority
-                width={33}
-                height={100}
+                style={{width: "23px", height: "auto"}}
                 className="logo-primary"
                 src={LogoWhite}
                 alt="Site Logo"
               />
               <Image
                 priority
-                width={100}
-                height={23}
+                style={{width: "100px", height: "auto"}}
                 className="logo-secondary"
                 src={LogoWhite2}
-                alt="Moibile Logo"
+                alt="Mobile Logo"
               />
             </Link>
           </div>

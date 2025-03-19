@@ -1,7 +1,7 @@
-import Link from "next/link";
-import ThumbFooter from "../../../public/assets/imgs/thumb/footer.jpeg";
-import FooterLogoWhite from "../../../public/assets/imgs/logo/nepstudio-white-logo.png";
 import Image from "next/image";
+import Link from "next/link";
+import FooterLogoWhite from "../../../public/assets/imgs/logo/nepstudio-white-logo.png";
+import ThumbFooter from "../../../public/assets/imgs/thumb/footer.webp";
 
 export default function Footer3() {
   return (
@@ -37,21 +37,21 @@ export default function Footer3() {
                     </p>
                     <ul className="footer__social">
                       <li>
-                        <a href="#">
+                        <a href="http://facebook.com/" target="_blank" aria-label="Facebook">
                           <span>
                             <i className="fa-brands fa-facebook-f"></i>
                           </span>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="http://twitter.com/" target="_blank" aria-label="Twitter">
                           <span>
                             <i className="fa-brands fa-twitter"></i>
                           </span>
                         </a>
                       </li>
                       <li>
-                        <a href="#">
+                        <a href="http://instagram.com/" target="_blank" aria-label="Instagram">
                           <span>
                             <i className="fa-brands fa-instagram"></i>
                           </span>
@@ -121,12 +121,12 @@ export default function Footer3() {
                     <p>
                       © 2025 | All rights reserved by{" "}
                       <a href="https://nepstudio.com.au/" target="_blank">
-                        NEPSTUDIO
+                        <span style={{color:"white"}}>NEPSTUDIO</span>
                       </a>
                     </p>
                   </div>
 
-                  <div className="footer__subscribe">
+                  {/* <div className="footer__subscribe">
                     <form action="#">
                       <input
                         type="email"
@@ -137,7 +137,7 @@ export default function Footer3() {
                         <i className="fa-solid fa-paper-plane"></i>
                       </button>
                     </form>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

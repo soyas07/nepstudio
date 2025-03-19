@@ -62,13 +62,13 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
               <h3 className="social-title">Follow Us</h3>
               <ul>
                 <li>
-                  <a href="#">Instagram</a>
+                  <a href="https://instagram.com" target="_blank">Instagram</a>
                 </li>
                 <li>
-                  <a href="#">Facebook</a>
+                  <a href="https://facebook.com" target="_blank">Facebook</a>
                 </li>
                 <li>
-                  <a href="#">Twitter</a>
+                  <a href="https://x.com" target="_blank">Twitter</a>
                 </li>
               </ul>
             </div>

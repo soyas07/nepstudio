@@ -6,9 +6,13 @@ const ContactDark = () => {
   return (
     <>
       <Head>
-        <title>Contact Dark</title>
-        <meta name="description" content="Contact Dark Description" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Get in touch with NEPSTUDIO for custom web development solutions, SEO strategies, and digital marketing services." />
+        <meta name="keywords" content="contact NEPSTUDIO, web development contact, SEO services, custom websites" />
+        <meta property="og:title" content="Contact NEPSTUDIO" />
+        <meta property="og:description" content="Reach out to NEPSTUDIO for your custom website needs and digital services." />
+        <meta property="og:image" content="/assets/imgs/contact-og.jpg" />
+        <meta property="og:url" content="https://www.nepstudio.com.au/contact" />
+        <title>Contact NEPSTUDIO</title>
       </Head>
       <main>
         <RootLayout header="header3" footer="footer3" defaultMode="dark">

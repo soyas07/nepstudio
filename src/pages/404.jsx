@@ -6,9 +6,13 @@ const ErrorDark = () => {
   return (
     <>
       <Head>
-        <title>Error Dark</title>
-        <meta name="description" content="Error Dark Description" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Page Not Found</title>
+        <meta name="description" content="Oops! The page you are looking for does not exist." />
+        <meta name="keywords" content="404 page, page not found, error page" />
+        <meta property="og:title" content="Page Not Found" />
+        <meta property="og:description" content="Sorry, the page you requested could not be found." />
+        <meta property="og:image" content="/assets/imgs/og/404-og.jpg" />
+        <meta property="og:url" content="https://www.nepstudio.com.au/404" />
       </Head>
       <main>
         <RootLayout header="header3" footer="none" defaultMode="dark">

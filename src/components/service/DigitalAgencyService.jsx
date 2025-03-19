@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-import { gsap } from "gsap";
 import { ScrollTrigger } from "@/plugins";
-import Link from "next/link";
-import Service11 from "@assets/imgs/service/1/service-1.jpg";
-import Service12 from "@assets/imgs/service/1/service.jpg";
-import Service13 from "@assets/imgs/service/1/service-3.jpg";
-import Service14 from "@assets/imgs/service/1/service-4.jpg";
+import Service11 from "@assets/imgs/service/1/service-1.webp";
+import Service13 from "@assets/imgs/service/1/service-3.webp";
+import Service14 from "@assets/imgs/service/1/service-4.webp";
+import Service12 from "@assets/imgs/service/1/service.webp";
+import { gsap } from "gsap";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
