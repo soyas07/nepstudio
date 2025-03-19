@@ -42,14 +42,28 @@ const DigitalAgency = ({ blog }) => {
 // Server-Side Rendering (SSR) Function
 export async function getServerSideProps(context) {
   const { req } = context;
-  const baseURL = `https://${req.headers.host}`; // Dynamically get the base URL
-  console.log(baseURL)
-  const res = await fetch(`${baseURL}/api/blog?id=1`);
-  const blog = await res.json();
+  const baseURL = `https://${req.headers.host}`; // Get the base URL dynamically
 
-  return {
-    props: { blog }, // Pass the fetched data to the page component
-  };
+  console.log("Fetching from:", `${baseURL}/api/blog?id=1`);
+
+  try {
+    const res = await fetch(`${baseURL}/api/blog?id=1`);
+    
+    // Log the response status & headers
+    console.log("Response Status:", res.status);
+    console.log("Response Headers:", res.headers.get("content-type"));
+
+    const text = await res.text(); // Read response as text for debugging
+    console.log("Response Text:", text); 
+
+    // Check if response is actually JSON
+    const blog = JSON.parse(text);
+
+    return { props: { blog } };
+  } catch (error) {
+    console.error("Error fetching blog:", error);
+    return { props: { blog: null, error: "Failed to fetch blog" } };
+  }
 }
 
 export default DigitalAgency;
