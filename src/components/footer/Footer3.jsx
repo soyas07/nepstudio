@@ -11,8 +11,9 @@ export default function Footer3() {
           <div className="container footer-line"></div>
           <Image
             priority
-            width={1160}
-            style={{ height: "auto" }}
+            loading="eager"
+            width={600}
+            height={450}
             src={ThumbFooter}
             alt="Footer Image"
             data-speed="0.75"

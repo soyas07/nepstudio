@@ -50,11 +50,11 @@ export default function Header3() {
           <div className="header__logo">
             <Link href="/">
               <Image
-                priority
                 style={{width: "23px", height: "auto"}}
                 className="logo-primary"
                 src={LogoWhite}
                 alt="Site Logo"
+                sizes="(max-width: 256px) 100vw, (max-width: 384px) 50vw, 384px"
               />
               <Image
                 priority
@@ -62,6 +62,7 @@ export default function Header3() {
                 className="logo-secondary"
                 src={LogoWhite2}
                 alt="Mobile Logo"
+                sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 1200px"
               />
             </Link>
           </div>

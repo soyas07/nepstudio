@@ -4,7 +4,6 @@ import { gsap } from "gsap";
 import Image from "next/image.js";
 import Link from "next/link.js";
 import { useEffect, useRef } from "react";
-import Hero1bg from "../../../public/assets/imgs/hero/1/bg.webp";
 import ArrowDownBig from "../../../public/assets/imgs/icon/arrow-down-big.png";
 
 const DigitalAgencyHero = () => {
@@ -100,14 +99,15 @@ const DigitalAgencyHero = () => {
           </div>
         </div>
 
-        <Image
-          src={Hero1bg}
-          width={3000}
-          height={2055}
-          alt="image"
-          className="hero1_bg"
-          loading="lazy"
-        />
+          <Image
+            priority
+            loading="eager"
+            alt="hero background image"
+            width={1200}
+            height={800}
+            className="hero1_bg"
+            src="/assets/imgs/hero/1/bg.webp"
+          />
       </section>
     </>
   );
