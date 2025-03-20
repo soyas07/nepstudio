@@ -1,21 +1,14 @@
-import { useEffect, useRef, useState } from "react";
-import allNavData from "../../../data/navData.json";
-import Preloader from "@/components/preloader/Preloader";
-import CommonAnimation from "../CommonAnimation";
-import ScrollSmootherComponents from "../ScrollSmootherComponents";
-import CursorAnimation from "../CursorAnimation";
-import Switcher from "../Switcher";
-import ScrollTop from "../ScrollTop";
+import Footer3 from "@/components/footer/Footer3";
 import Header1 from "@/components/header/Header1";
-import Footer1 from "@/components/footer/Footer1";
 import Header2 from "@/components/header/Header2";
 import Header3 from "@/components/header/Header3";
 import Header4 from "@/components/header/Header4";
 import Header5 from "@/components/header/Header5";
-import Footer2 from "@/components/footer/Footer2";
-import Footer3 from "@/components/footer/Footer3";
-import Footer4 from "@/components/footer/Footer4";
-import Footer5 from "@/components/footer/Footer5";
+import Preloader from "@/components/preloader/Preloader";
+import { useEffect, useRef, useState } from "react";
+import allNavData from "../../../data/navData.json";
+import CursorAnimation from "../CursorAnimation";
+import ScrollTop from "../ScrollTop";
 
 const HeaderContent = ({ header, navData }) => {
   if (header == "header1") {
@@ -35,21 +28,7 @@ const HeaderContent = ({ header, navData }) => {
   }
 };
 const FooterContent = ({ footer }) => {
-  if (footer == "footer1") {
-    return <Footer1 />;
-  } else if (footer == "footer2") {
-    return <Footer2 />;
-  } else if (footer == "footer3") {
-    return <Footer3 />;
-  } else if (footer == "footer4") {
-    return <Footer4 />;
-  } else if (footer == "footer5") {
-    return <Footer5 />;
-  } else if (footer == "none") {
-    return "";
-  } else {
-    return <Footer3 />;
-  }
+  return <Footer3 />;
 };
 
 export default function RootLayout({
@@ -75,20 +54,9 @@ export default function RootLayout({
   }, [mode]);
   return (
     <>
-      <CommonAnimation>
         <div className="has-smooth" id="has_smooth"></div>
-        <ScrollSmootherComponents />
-        <div className="cursor" id="team_cursor">
-          Drag
-        </div>
         <Preloader />
         <CursorAnimation cursor1={cursor1} cursor2={cursor2} />
-        {/* <Switcher
-          setMode={setMode}
-          mode={mode}
-          cursor1={cursor1}
-          cursor2={cursor2}
-        /> */}
         <ScrollTop />
         <HeaderContent header={header} navData={navData} />
         <div id="smooth-wrapper">
@@ -97,7 +65,6 @@ export default function RootLayout({
             <FooterContent footer={footer} />
           </div>
         </div>
-      </CommonAnimation>
     </>
   );
 }

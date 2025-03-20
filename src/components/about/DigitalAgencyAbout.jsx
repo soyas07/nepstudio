@@ -41,21 +41,29 @@ const DigitalAgencyAbout = () => {
                 <div className="about__img">
                   <div className="img-anim about__img_left">
                     <Image
-                      loading="lazy"
-                      style={{ width: "auto", height: "auto" }}
+                      loading="eager"
+                      priority
+                      width={120}
+                      height={350}
                       src={About11}
                       alt="About Image"
+                      srcSet="/assets/imgs/about/1/about-1.jpg 1x"
                       data-speed="0.3"
                     />
                   </div>
 
                   <div className="about__img-right">
                     <Image
-                      loading="lazy"
+                      loading="eager"
+                      priority
                       width={220}
                       height={220}
                       style={{ objectFit: "cover" }}
                       src={About12}
+                      srcSet="
+                        /assets/imgs/about/1/about-2.jpg 1x,
+                        /assets/imgs/about/1/about-2.jpg 2x
+                      "
                       alt="About Image Right"
                       data-speed="0.5"
                     />

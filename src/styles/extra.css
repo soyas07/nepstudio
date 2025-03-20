@@ -375,14 +375,14 @@
 }
 
 #btn-cta {
-  background-color: #000;
+  background-color: #fff !important;
   border: 1px solid white;
-  color: #fff;
+  color: #000;
 }
 
 #btn-cta:hover {
   color: black;
-  background-color: var(--primary);
+  background-color: var(--primary) !important;
   border: 1px solid var(--primary);
 }
 

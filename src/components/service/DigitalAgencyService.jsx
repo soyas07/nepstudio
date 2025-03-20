@@ -153,10 +153,14 @@ const DigitalAgencyService = () => {
               <div className="col-xxl-4 col-xl-4 col-lg-0 col-md-0">
                 <div className="service__img-wrapper">
                   <Image
-                    priority
+                    loading="lazy"
                     width={280}
                     style={{ height: "auto" }}
                     src={Service11}
+                    srcSet="
+                        /assets/imgs/service/1/service-1.jpg 1x,
+                        /assets/imgs/service/1/service-1.jpg 2x
+                      "
                     alt="Service Image"
                     className={
                       activeImg == 1
@@ -165,10 +169,14 @@ const DigitalAgencyService = () => {
                     }
                   />
                   <Image
-                    priority
+                    loading="lazy"
                     width={280}
                     style={{ height: "auto" }}
                     src={Service12}
+                    srcSet="
+                        /assets/imgs/service/1/service.jpg 1x,
+                        /assets/imgs/service/1/service.jpg 2x
+                      "
                     alt="Service Image"
                     className={
                       activeImg == 2
@@ -177,10 +185,14 @@ const DigitalAgencyService = () => {
                     }
                   />
                   <Image
-                    priority
+                    loading="lazy"
                     width={280}
                     style={{ height: "auto" }}
                     src={Service13}
+                    srcSet="
+                        /assets/imgs/service/1/service-3.jpg 1x,
+                        /assets/imgs/service/1/service-3.jpg 2x
+                      "
                     alt="Service Image"
                     className={
                       activeImg == 3
@@ -189,11 +201,15 @@ const DigitalAgencyService = () => {
                     }
                   />
                   <Image
-                    priority
+                    loading="lazy"
                     width={280}
                     style={{ height: "auto" }}
                     src={Service14}
                     alt="Service Image"
+                    srcSet="
+                        /assets/imgs/service/1/service-4.jpg 1x,
+                        /assets/imgs/service/1/service-4.jpg 2x
+                      "
                     className={
                       activeImg == 4
                         ? "service__img img-4 active"
