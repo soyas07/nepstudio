@@ -368,6 +368,12 @@
     visibility: hidden;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 995px) {
+  .hero__placeholder {
+    display: inline-block;
+    visibility: hidden;
+  }
+}
 
 .hero__title::after {
   content: "";
