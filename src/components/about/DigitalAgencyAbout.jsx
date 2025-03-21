@@ -43,8 +43,7 @@ const DigitalAgencyAbout = () => {
                     <Image
                       loading="eager"
                       priority
-                      width={120}
-                      height={350}
+                      style={{width: "100%", height: "100%"}}
                       src={About11}
                       alt="About Image"
                       srcSet="/assets/imgs/about/1/about-1.jpg 1x"
