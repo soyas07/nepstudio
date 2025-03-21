@@ -374,6 +374,26 @@
     visibility: hidden;
   }
 }
+@media only screen and (min-width: 303px) and (max-width: 408px) {
+  .hero__placeholder {
+    display: inline-block;
+    visibility: hidden;
+  }
+
+  .hero__placeholder::after {
+    content: "&&&";
+  }
+}
+@media only screen and (min-width: 425px) and (max-width: 426px) {
+  .hero__placeholder {
+    display: inline-block;
+    visibility: hidden;
+  }
+
+  .hero__placeholder::after {
+    content: "&&&";
+  }
+}
 
 .hero__title::after {
   content: "";

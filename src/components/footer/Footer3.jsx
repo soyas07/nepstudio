@@ -12,8 +12,7 @@ export default function Footer3() {
           <Image
             priority
             loading="eager"
-            width={600}
-            height={450}
+            style={{ width: "100%", height: "100%" }}
             src={ThumbFooter}
             alt="Footer Image"
             data-speed="0.75"
