@@ -44,10 +44,10 @@ export async function getServerSideProps(context) {
   const { req } = context;
   const baseURL = `https://${req.headers.host}`; // Get the base URL dynamically
 
-  console.log("Fetching from:", `${baseURL}/api/blog?id=1`);
+  console.log("Fetching from:", `${baseURL}/api/hello`);
 
   try {
-    const res = await fetch(`${baseURL}/api/blog?id=1`);
+    const res = await fetch(`${baseURL}/api/hello`);
     
     // Log the response status & headers
     console.log("Response Status:", res.status);

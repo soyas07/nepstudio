@@ -13,7 +13,8 @@ export default function Footer3() {
             priority
             loading="eager"
             width={1160}
-            style={{ height: "100%" }}
+            height={653}
+            style={{ objectFit: "cover" }}
             src={ThumbFooter}
             alt="Footer Image"
             data-speed="0.75"
@@ -121,7 +122,7 @@ export default function Footer3() {
                   <div className="footer__copyright">
                     <p>
                       © 2025 | All rights reserved by{" "}
-                      <a href="https://nepstudio.com.au/" target="_blank">
+                      <a href="https://www.nepstudio.com.au/" target="_blank">
                         <span style={{color:"white"}}>NEPSTUDIO</span>
                       </a>
                     </p>

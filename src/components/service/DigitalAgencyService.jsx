@@ -187,7 +187,8 @@ const DigitalAgencyService = () => {
                   <Image
                     loading="lazy"
                     width={280}
-                    style={{ height: "auto" }}
+                    height={373}
+                    style={{ objectFit: "cover" }}
                     src={Service13}
                     srcSet="
                         /assets/imgs/service/1/service-3.jpg 1x,
@@ -201,7 +202,8 @@ const DigitalAgencyService = () => {
                     }
                   />
                   <Image
-                    loading="lazy"
+                    priority
+                    loading="eager"
                     width={280}
                     style={{ height: "auto" }}
                     src={Service14}

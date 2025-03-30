@@ -10,7 +10,7 @@ const ContactDark = () => {
         <meta name="keywords" content="contact NEPSTUDIO, web development contact, SEO services, custom websites" />
         <meta property="og:title" content="Contact NEPSTUDIO" />
         <meta property="og:description" content="Reach out to NEPSTUDIO for your custom website needs and digital services." />
-        <meta property="og:image" content="/assets/imgs/contact-og.jpg" />
+        <meta property="og:image" content="/assets/imgs/og/contact-og.jpg" />
         <meta property="og:url" content="https://www.nepstudio.com.au/contact" />
         <title>Contact NEPSTUDIO</title>
       </Head>
