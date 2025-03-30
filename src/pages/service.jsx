@@ -12,7 +12,7 @@ const ServiceV2Dark = () => {
         <meta property="og:title" content="Our Services - NEPSTUDIO" />
         <meta property="og:description" content="Learn more about NEPSTUDIO's custom web development and SEO services to boost your online presence." />
         <meta property="og:image" content="/assets/imgs/og/home-og.jpg" />
-        <meta property="og:url" content="https://www.nepstudio.com.au/services" />
+        <meta property="og:url" content="https://www.nepstudio.com.au/service" />
         <title>Our Services - NEPSTUDIO</title>
       </Head>
       <main>

@@ -66,7 +66,7 @@ const DigitalAgencyHero = () => {
                   <h1 className="hero__title" ref={heroTitle}>
                     Web design <span className="hero__placeholder">&</span>studio
                   </h1>
-                  <p className="hero__sub-title" ref={heroSubTitle}>
+                  <p className="hero__sub-title" >
                     We deliver fully custom, responsive, and
                      <span>expertly crafted website design & development</span>
                     tailored to your unique business needs—100% Aussie-based.
@@ -99,15 +99,15 @@ const DigitalAgencyHero = () => {
           </div>
         </div>
 
-          <Image
+          {/* <Image
             priority
             loading="eager"
             alt="hero background image"
-            width={1200}
-            height={800}
+            width={600}
+            height={400}
             className="hero1_bg"
             src="/assets/imgs/hero/1/bg.webp"
-          />
+          /> */}
       </section>
     </>
   );

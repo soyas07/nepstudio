@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
-import About11 from "../../../public/assets/imgs/about/1/about-1.jpg";
+import About11 from "../../../public/assets/imgs/about/1/about-1.webp";
 import About12 from "../../../public/assets/imgs/about/1/about-2.jpg";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -43,11 +43,13 @@ const DigitalAgencyAbout = () => {
                     <Image
                       loading="eager"
                       priority
-                      style={{width: "100%", height: "100%"}}
+                      width={400}
+                      height={600}
                       src={About11}
                       alt="About Image"
-                      srcSet="/assets/imgs/about/1/about-1.jpg 1x"
+                      srcSet="/assets/imgs/about/1/about-1.webp 1x"
                       data-speed="0.3"
+                      style={{ objectFit: 'cover' }}
                     />
                   </div>
 

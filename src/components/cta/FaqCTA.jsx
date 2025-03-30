@@ -13,7 +13,7 @@ const FaqCTA = () => {
                   Still you have question?
                 </h2>
                 <p className="sub-title-anim">
-                  Well, we are packed, so no open vacancies now
+                  Enquiry using contact us form below
                 </p>
                 <div className="btn_wrapper">
                   <Link
