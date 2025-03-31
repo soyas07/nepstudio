@@ -96,7 +96,7 @@ export default function Footer3() {
                     <ul className="footer__contact">
                       <li>Sydney, NSW, Australia</li>
                       <li>
-                        <a href="mailto:info@nestudio.com.au">
+                        <a href="mailto:info@nepstudio.com.au">
                           info@nepstudio.com.au
                         </a>
                       </li>

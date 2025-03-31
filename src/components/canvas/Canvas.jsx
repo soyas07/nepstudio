@@ -115,7 +115,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
               <h3>Get in touch</h3>
               <ul>
                 <li>
-                  <a href="mailto:info@nepstudio.com">info@nepstudio.com</a>
+                  <a href="mailto:info@nepstudio.com.au">info@nepstudio.com.au</a>
                 </li>
               </ul>
             </div>
