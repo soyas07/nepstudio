@@ -14,7 +14,7 @@ const DigitalAgencyCTA = () => {
               </h2>
               <div className="btn_wrapper">
                 <Link href="/contact" className="wc-btn-primary btn-hover btn-item">
-                  <span style={{ display: "inline-block", width: "1em" }}></span>
+                  <span></span>
                   Let’s talk us{" "}
                   <i
                     className="fa-solid fa-arrow-right"
