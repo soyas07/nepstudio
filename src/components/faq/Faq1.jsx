@@ -19,7 +19,7 @@ const Faq1 = () => {
                   FAQ
                 </h2>
                 <p className="">
-                  Frequently asked question (FAQ) <br /> pages to find answars.
+                  Frequently asked question (FAQ) <br /> pages to find answers.
                 </p>
               </div>
             </div>
