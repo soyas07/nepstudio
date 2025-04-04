@@ -99,15 +99,16 @@ const DigitalAgencyHero = () => {
           </div>
         </div>
 
-          {/* <Image
+          <Image
             priority
             loading="eager"
             alt="hero background image"
             width={600}
             height={400}
+            quality={85}
             className="hero1_bg"
-            src="/assets/imgs/hero/1/bg.webp"
-          /> */}
+            src="/assets/imgs/hero/1/1.jpg"
+          />
       </section>
     </>
   );
